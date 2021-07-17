@@ -41,7 +41,7 @@ uses Windows, ActiveX, Classes, StdVCL, Variants;
 // *********************************************************************//
 const
   // TypeLibrary Major and minor versions
-  ArFiguresMajorVersion = 1;
+  ArFiguresMajorVersion = 2;
   ArFiguresMinorVersion = 0;
 
   LIBID_ArFigures: TGUID = '{8E5FF81D-D499-45DA-BCEA-39A6266CEC25}';

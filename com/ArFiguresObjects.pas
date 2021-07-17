@@ -11,11 +11,8 @@ type
   TFigure = class(TAutoObject, IFigure)
   protected
     function About: WideString; safecall;
-    function Extended(Number: Double; const Name, Dual1, Dual2,
-      Plural: WideString; Gender: WordBool): WideString; safecall;
-    function Simple(const Number, CurrencyName, PartName: WideString;
-      Decimals: Integer; Gender: WordBool): WideString; safecall;
-
+    function Extended(Number: Double; const Name, Dual1, Dual2, Plural: WideString; Gender: WordBool): WideString; safecall;
+    function Simple(const Number, CurrencyName, PartName: WideString; Decimals: Integer; Gender: WordBool): WideString; safecall;
   end;
 
 implementation
@@ -24,7 +21,7 @@ uses ComServ, ArabicFigures, SimpleFigures;
 
 function TFigure.About: WideString;
 begin
-  Result := 'parmaja.com'
+  Result := 'parmaja.org'
 end;
 
 function Internal_ExtendedFigure(Number: Extended; CurrencyName, DualName1, DualName2, PluralName: string; Gender: Boolean): string;
@@ -46,19 +43,16 @@ begin
   Result := ArabicSimpleFigure(Number, CurrencyName, PartName, Decimals, Gender);
 end;
 
-function TFigure.Extended(Number: Double; const Name, Dual1, Dual2,
-  Plural: WideString; Gender: WordBool): WideString;
+function TFigure.Extended(Number: Double; const Name, Dual1, Dual2, Plural: WideString; Gender: WordBool): WideString;
 begin
   Result := Internal_ExtendedFigure(Number, Name, Dual1, Dual2, Plural, Gender);
 end;
 
-function TFigure.Simple(const Number, CurrencyName, PartName: WideString;
-  Decimals: Integer; Gender: WordBool): WideString;
+function TFigure.Simple(const Number, CurrencyName, PartName: WideString; Decimals: Integer; Gender: WordBool): WideString;
 begin
   Result := Internal_SimpleFigure(Number, CurrencyName, PartName, Decimals ,Gender)
 end;
 
 initialization
-  TAutoObjectFactory.Create(ComServer, TFigure, Class_Figure,
-    ciMultiInstance, tmApartment);
+  TAutoObjectFactory.Create(ComServer, TFigure, Class_Figure, ciMultiInstance, tmApartment);
 end.
