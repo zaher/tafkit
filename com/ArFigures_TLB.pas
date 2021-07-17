@@ -29,7 +29,7 @@ unit ArFigures_TLB;
 {$VARPROPSETTER ON}
 interface
 
-uses Windows, ActiveX, Classes, Graphics, StdVCL, Variants;
+uses Windows, ActiveX, Classes, StdVCL, Variants;
   
 
 // *********************************************************************//

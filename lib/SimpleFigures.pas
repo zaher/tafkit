@@ -1,4 +1,4 @@
-unit SimpleFigures; {!$DONTTRANSUNIT}
+ï»¿unit SimpleFigures; {!$DONTTRANSUNIT}
 {
 /**
  * Arabic figures numbers
@@ -31,13 +31,13 @@ begin
 end;
 
 const
-  FirstArray: array[1..9, 0..1] of string = (('æÇÍÏ', 'ÅÍÏì'), ('ÇËäÇä', 'ÇËäÇ'), ('ËáÇËÉ', 'ËáÇË'), ('ÃÑÈÚÉ', 'ÃÑÈÚ'),
-    ('ÎãÓÉ', 'ÎãÓ'), ('ÓÊÉ', 'ÓÊ'), ('ÓÈÚÉ', 'ÓÈÚ'), ('ËãÇäíÉ', 'ËãÇä'), ('ÊÓÚÉ', 'ÊÓÚ'));
-  FirstArray1: array[1..2, 0..1] of string = (('ÃÍÏ', 'ÅÍÏì'), ('ÇËäÇ', 'ÇËäÊÇ'));
-  SecondArray: array[1..9, 0..1] of string = (('ÚÔÑÉ', 'ÚÔÑ'), ('ÚÔÑæä', 'ÚÔÑæä'), ('ËáÇËæä', 'ËáÇËæä'), ('ÃÑÈÚæä', 'ÃÑÈÚæä'), ('ÎãÓæä', 'ÎãÓæä'),
-    ('ÓÊæä', 'ÓÊæä'), ('ÓÈÚæä', 'ÓÈÚæä'), ('ËãÇäæä', 'ËãÇäæä'), ('ÊÓÚæä', 'ÊÓÚæä'));
-  ThirdArray: array[1..9] of string = ('ãÇÆÉ', 'ãÇÆÊÇä', 'ËáÇËãÇÆÉ', 'ÃÑÈÚãÇÆÉ', 'ÎãÓãÇÆÉ', 'ÓÊãÇÆÉ',
-    'ÓÈÚãÇÆÉ', 'ËãÇäãÇÆÉ', 'ÊÓÚãÇÆÉ');
+  FirstArray: array[1..9, 0..1] of string = (('ÙˆØ§Ø­Ø¯', 'Ø¥Ø­Ø¯Ù‰'), ('Ø§Ø«Ù†Ø§Ù†', 'Ø§Ø«Ù†Ø§'), ('Ø«Ù„Ø§Ø«Ø©', 'Ø«Ù„Ø§Ø«'), ('Ø£Ø±Ø¨Ø¹Ø©', 'Ø£Ø±Ø¨Ø¹'),
+    ('Ø®Ù…Ø³Ø©', 'Ø®Ù…Ø³'), ('Ø³ØªØ©', 'Ø³Øª'), ('Ø³Ø¨Ø¹Ø©', 'Ø³Ø¨Ø¹'), ('Ø«Ù…Ø§Ù†ÙŠØ©', 'Ø«Ù…Ø§Ù†'), ('ØªØ³Ø¹Ø©', 'ØªØ³Ø¹'));
+  FirstArray1: array[1..2, 0..1] of string = (('Ø£Ø­Ø¯', 'Ø¥Ø­Ø¯Ù‰'), ('Ø§Ø«Ù†Ø§', 'Ø§Ø«Ù†ØªØ§'));
+  SecondArray: array[1..9, 0..1] of string = (('Ø¹Ø´Ø±Ø©', 'Ø¹Ø´Ø±'), ('Ø¹Ø´Ø±ÙˆÙ†', 'Ø¹Ø´Ø±ÙˆÙ†'), ('Ø«Ù„Ø§Ø«ÙˆÙ†', 'Ø«Ù„Ø§Ø«ÙˆÙ†'), ('Ø£Ø±Ø¨Ø¹ÙˆÙ†', 'Ø£Ø±Ø¨Ø¹ÙˆÙ†'), ('Ø®Ù…Ø³ÙˆÙ†', 'Ø®Ù…Ø³ÙˆÙ†'),
+    ('Ø³ØªÙˆÙ†', 'Ø³ØªÙˆÙ†'), ('Ø³Ø¨Ø¹ÙˆÙ†', 'Ø³Ø¨Ø¹ÙˆÙ†'), ('Ø«Ù…Ø§Ù†ÙˆÙ†', 'Ø«Ù…Ø§Ù†ÙˆÙ†'), ('ØªØ³Ø¹ÙˆÙ†', 'ØªØ³Ø¹ÙˆÙ†'));
+  ThirdArray: array[1..9] of string = ('Ù…Ø§Ø¦Ø©', 'Ù…Ø§Ø¦ØªØ§Ù†', 'Ø«Ù„Ø§Ø«Ù…Ø§Ø¦Ø©', 'Ø£Ø±Ø¨Ø¹Ù…Ø§Ø¦Ø©', 'Ø®Ù…Ø³Ù…Ø§Ø¦Ø©', 'Ø³ØªÙ…Ø§Ø¦Ø©',
+    'Ø³Ø¨Ø¹Ù…Ø§Ø¦Ø©', 'Ø«Ù…Ø§Ù†Ù…Ø§Ø¦Ø©', 'ØªØ³Ø¹Ù…Ø§Ø¦Ø©');
 
 function GetNum(var S: string; Index: integer; Gender: Boolean): string;
 var
@@ -66,7 +66,7 @@ begin
   end;
   
   if (Indx[2] > 1) and (TmpArray[0] <> '') then
-    TmpArray[0] := TmpArray[0] + 'æ '
+    TmpArray[0] := TmpArray[0] + 'Ùˆ '
   else if (Indx[1] = 1) and (Indx[2] = 1) then
     TmpArray[0] := FirstArray1[1, Ord(Gender)]
   else if (Indx[1] = 2) and (Indx[2] = 1) then
@@ -82,7 +82,7 @@ begin
     if (Indx[3] <> -1) then
       Exit;
   if (Indx[3] > 0) and ((TmpArray[0] <> '') or (TmpArray[1] <> '')) then
-    TmpArray[2] := TmpArray[2] + ' æ ';
+    TmpArray[2] := TmpArray[2] + ' Ùˆ ';
 
   case Index of
     -1:
@@ -101,53 +101,53 @@ begin
     1:
       begin
         if (Indx[1] = 1) and (Indx[2] = -1) and (Indx[3] = -1) then
-          Result := ' ÃáÝ'
+          Result := ' Ø£Ù„Ù'
         else if (Indx[1] = 2) and (Indx[2] = -1) and (Indx[3] = -1) then
-          Result := 'ÃáÝÇä'
+          Result := 'Ø£Ù„ÙØ§Ù†'
         else if (Indx[1] > 2) and (Indx[2] = -1) and (Indx[3] = -1) then
-          Result := TmpArray[0] + ' ÃáÇÝ'
+          Result := TmpArray[0] + ' Ø£Ù„Ø§Ù'
         else if (Indx[1] > 2) and (Indx[2] = 0) and (Indx[3] <> -1) then
-          Result := TmpArray[2] + TmpArray[0] + TmpArray[1] + ' ÃáÇÝ'
+          Result := TmpArray[2] + TmpArray[0] + TmpArray[1] + ' Ø£Ù„Ø§Ù'
         else if (Indx[1] = 0) and (Indx[2] = 1) and (Indx[3] = -1) then
-          Result := TmpArray[2] + TmpArray[0] + TmpArray[1] + ' ÃáÇÝ'
+          Result := TmpArray[2] + TmpArray[0] + TmpArray[1] + ' Ø£Ù„Ø§Ù'
         else if (Indx[1] = 0) and (Indx[2] = 0) and (Indx[3] = 0) then
           Result := TmpArray[2] + TmpArray[0] + TmpArray[1]
         else
-          Result := TmpArray[2] + TmpArray[0] + TmpArray[1] + ' ÃáÝ';
+          Result := TmpArray[2] + TmpArray[0] + TmpArray[1] + ' Ø£Ù„Ù';
       end;
 
     2:
       begin
         if (Indx[1] = 1) and (Indx[2] = -1) and (Indx[3] = -1) then
-          Result := ' ãáíæä'
+          Result := ' Ù…Ù„ÙŠÙˆÙ†'
         else if (Indx[1] = 2) and (Indx[2] = -1) and (Indx[3] = -1) then
-          Result := 'ãáíæäÇä'
+          Result := 'Ù…Ù„ÙŠÙˆÙ†Ø§Ù†'
         else if (Indx[1] > 2) and (Indx[2] = -1) and (Indx[3] = -1) then
-          Result := TmpArray[0] + 'ãáÇííä'
+          Result := TmpArray[0] + 'Ù…Ù„Ø§ÙŠÙŠÙ†'
         else if (Indx[1] > 2) and (Indx[2] = 0) and (Indx[3] <> -1) then
-          Result := TmpArray[2] + TmpArray[0] + TmpArray[1] + 'ãáÇííä'
+          Result := TmpArray[2] + TmpArray[0] + TmpArray[1] + 'Ù…Ù„Ø§ÙŠÙŠÙ†'
         else if (Indx[1] = 0) and (Indx[2] = 1) and (Indx[3] = -1) then
-          Result := TmpArray[2] + TmpArray[0] + TmpArray[1] + 'ãáÇííä'
+          Result := TmpArray[2] + TmpArray[0] + TmpArray[1] + 'Ù…Ù„Ø§ÙŠÙŠÙ†'
         else if (Indx[1] = 0) and (Indx[2] = 0) and (Indx[3] = 0) then
           Result := TmpArray[2] + TmpArray[0] + TmpArray[1]
         else
-          Result := TmpArray[2] + TmpArray[0] + TmpArray[1] + ' ãáíæä';
+          Result := TmpArray[2] + TmpArray[0] + TmpArray[1] + ' Ù…Ù„ÙŠÙˆÙ†';
       end;
 
     3:
       begin
         if (Indx[1] = 1) and (Indx[2] = -1) and (Indx[3] = -1) then
-          Result := ' ãáíÇÑ'
+          Result := ' Ù…Ù„ÙŠØ§Ø±'
         else if (Indx[1] = 2) and (Indx[2] = -1) and (Indx[3] = -1) then
-          Result := 'ãáíÇÑÇä'
+          Result := 'Ù…Ù„ÙŠØ§Ø±Ø§Ù†'
         else if (Indx[1] > 2) and (Indx[2] = -1) and (Indx[3] = -1) then
-          Result := TmpArray[0] + 'ãáíÇÑÇÊ'
+          Result := TmpArray[0] + 'Ù…Ù„ÙŠØ§Ø±Ø§Øª'
         else if (Indx[1] > 2) and (Indx[2] = -1) and (Indx[3] = -1) then
-          Result := TmpArray[2] + TmpArray[0] + TmpArray[1] + 'ãáíÇÑÇÊ'
+          Result := TmpArray[2] + TmpArray[0] + TmpArray[1] + 'Ù…Ù„ÙŠØ§Ø±Ø§Øª'
         else if (Indx[1] = 0) and (Indx[2] = 1) and (Indx[3] = -1) then
-          Result := TmpArray[2] + TmpArray[0] + TmpArray[1] + 'ãáíÇÑÇÊ'
+          Result := TmpArray[2] + TmpArray[0] + TmpArray[1] + 'Ù…Ù„ÙŠØ§Ø±Ø§Øª'
         else
-          Result := TmpArray[2] + TmpArray[0] + TmpArray[1] + ' ãáíÇÑ';
+          Result := TmpArray[2] + TmpArray[0] + TmpArray[1] + ' Ù…Ù„ÙŠØ§Ø±';
       end;
   end;
 end;
@@ -161,7 +161,7 @@ var
 begin
   if Number = '0' then
   begin
-    Result := ' ÕÝÑ';
+    Result := ' ØµÙØ±';
     Exit;
   end;
   if Number = '' then
@@ -192,7 +192,7 @@ begin
   for i := 3 downto 0 do
     if Length(PartStr[i]) > 0 then
       if (i <> 0) and (Length(PartStr[i - 1]) > 0) then
-        EndStr := EndStr + ' ' + PartStr[i] + ' æ '
+        EndStr := EndStr + ' ' + PartStr[i] + ' Ùˆ '
       else
         EndStr := EndStr + ' ' + PartStr[i] + ' ' + CurrencyName;
   Result := Trim(EndStr);
@@ -224,7 +224,7 @@ begin
   if (AfterPoint <> '') then
   begin
     S := GetArabicSimpleFigure(AfterPoint, PartName, Gender);
-    Result := Result + ' æ ' + s;
+    Result := Result + ' Ùˆ ' + s;
   end;
 end;
 
