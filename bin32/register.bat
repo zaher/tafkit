@@ -1,1 +1,1 @@
-regsvr32 ArFigures.dll 
+regsvr32 %~dp0%ArFigures.dll
